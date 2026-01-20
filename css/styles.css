@@ -767,7 +767,61 @@ body{
   margin-top: 8px;
 }
 
+/* ===========================
+   LEADERSHIP SECTION
+   =========================== */
 
+.leaders{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.leaderCard{
+  background: rgba(255,255,255,0.88);
+  border: 1px solid rgba(13, 63, 100, 0.10);
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: 0 10px 26px rgba(13,63,100,0.06);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.leaderCard:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(13,63,100,0.10);
+}
+
+.leaderCard__top{
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(13, 63, 100, 0.08);
+}
+
+.leaderCard__name{
+  font-family: Poppins, Inter, sans-serif;
+  font-weight: 900;
+  color: var(--samg-navy);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.leaderCard__role{
+  margin-top: 6px;
+  font-weight: 800;
+  color: rgba(30,42,50,0.72);
+  font-size: 13px;
+}
+
+.leaderCard__text{
+  color: rgba(30,42,50,0.78);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .leaders{ grid-template-columns: 1fr; }
+}
 
 /* ---------- Split section (About) ---------- */
 .split{
